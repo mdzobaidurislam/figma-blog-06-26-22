@@ -22,12 +22,12 @@ a {
 }
 
 .form-control:focus {
-  background: #F7F8FA;
-  border: 1px solid #D9D9DB;
-  border-color: none;
-  outline: 0;
-  box-shadow: none;
+  background: #F7F8FA !important;
+  border: 1px solid #D9D9DB !important;
+  outline: 0 !important;
+  box-shadow: none !important;
 }
+
 
 .border_top_0 {
   border-top: 0 !important;
