@@ -1,0 +1,48 @@
+.location_input {
+    width: 255px;
+    margin-left: auto;
+}
+
+.sidebar_section .input_seacrh {
+    background: none;
+    border-bottom: 0.4px solid #B8B8B8;
+    border-radius: 0;
+    width: 100%;
+    padding: 0;
+    padding: 5px;
+}
+
+.sidebar_section .search_icon {
+    margin-left: -8px;
+}
+
+.sidebar_section .input_seacrh input {
+    padding: 5px;
+}
+
+
+.error_outline_area {
+    padding: 35px 0;
+}
+
+.error_outline_text span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: #e9ecef00;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .md_sidebar_display_none {
+        display: none;
+    }
+}

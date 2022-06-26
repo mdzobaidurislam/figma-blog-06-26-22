@@ -1,0 +1,33 @@
+.group_text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: 30px;
+}
+
+.group_area {
+    padding-top: 20px;
+}
+
+.follow_group {
+    padding-bottom: 30px;
+}
+
+.follow_btn_active {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.follow_area .follow_btn {
+    border: none;
+    background: #EDEEF0;
+    border-radius: 14px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+    padding: 4px 12px;
+}

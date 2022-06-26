@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+body {
+  margin: 0 !important;
+  font-family: 'IBM Plex Sans', sans-serif !important;
+  font-style: normal !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.width_100 {
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cur_pointer {
+  cursor: pointer !important;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  background: #F7F8FA;
+  border: 1px solid #D9D9DB;
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+.border_top_0 {
+  border-top: 0 !important;
+}
+
+.border_right_0 {
+  border-right: 0 !important;
+}
+
+.w_736 {
+  width: 736px;
+}
+
+.p_10 {
+  padding: 10px 0 !important;
+}
+
+.p_20 {
+  padding: 20px 0 !important;
+}
+
+.custom_gap_0 {
+  gap: 0px !important;
+}
+
+.custom_gap_10 {
+  gap: 10px !important;
+}
+
+.custom_gap_20 {
+  gap: 20px !important;
+}
+
+.custom_gap_30 {
+  gap: 30px !important;
+}
+
+.custom_gap_40 {
+  gap: 40px !important;
+}
+
+.display_flex {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.align_items_self_start {
+  align-items: self-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.justify_content_start {
+  justify-content: start
 }
+
+.signin_text {
+  color: #2F6CE5;
+}
+
+/* responsive */

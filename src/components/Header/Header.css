@@ -1,0 +1,77 @@
+.nav_bar {
+    padding: 30px 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.input_seacrh {
+    width: 360px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    background: #F2F2F2;
+    border-radius: 21px;
+    padding: 15px;
+}
+
+.input_seacrh input {
+    font-family: 'IBM Plex Sans', sans-serif !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #5C5C5C;
+    border: none;
+    background: none;
+    padding: 16px;
+}
+
+.input_seacrh input:focus {
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+.profile img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.text_accout {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: right;
+    color: #2E2E2E;
+}
+
+.text_accout span {
+    color: #2F6CE5;
+}
+
+.profile_text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.arrow_drop_down_profile {
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.arrow_drop_down {
+    cursor: pointer;
+}
+
+/* responsive header */
+@media (max-width: 768px) {
+    .md_h_d_n {
+        display: none;
+    }
+
+}
