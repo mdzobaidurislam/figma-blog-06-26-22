@@ -7,6 +7,7 @@ import SpinnerLoading from "../Share/SpinnerLoading";
 import "./Home.css";
 const Home = () => {
   const [user, loading] = useAuthState(auth);
+
   if (loading) {
     return <SpinnerLoading />;
   }

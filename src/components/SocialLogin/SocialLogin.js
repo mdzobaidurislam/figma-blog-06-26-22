@@ -1,12 +1,15 @@
 import React from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import useGlobalContexts from "../../Context/GlobalContext";
 import auth from "../Firebase/Firebase.init";
 import SpinnerLoading from "../Share/SpinnerLoading";
 import fb from "./../images/login/f_logo.png";
 import google from "./../images/login/g_search.png";
 
-const SocialLogin = ({ setmodalshowsignup, setmodalshow, signup }) => {
+const SocialLogin = ({ signup }) => {
+  const { setmodalshow, setmodalshowsignup } = useGlobalContexts();
+
   // github
   // const [signInWithGithub, gituser, gitloading, giterror] =
   //   useSignInWithGithub(auth);

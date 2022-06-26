@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
 import twotone_thumb_up from "./../images/blog/twotone-thumb_up.png";
+import g1 from "./../images/blog/g1.png";
+import g2 from "./../images/blog/g2.png";
+import g3 from "./../images/blog/g3.png";
 import follow1 from "./../images/blog/follow1.png";
 import "./Group.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../Firebase/Firebase.init";
 const Group = () => {
+  const [user] = useAuthState(auth);
   const [itemsFollows, setItemsFollows] = useState([]);
   const follows = [
-    { id: 1, name: "Jami", image: follow1, status: true },
-    { id: 2, name: "Jami", image: follow1, status: true },
-    { id: 3, name: "Jami", image: follow1, status: true },
-    { id: 4, name: "Jami", image: follow1, status: true },
-    { id: 5, name: "Jami", image: follow1, status: true },
+    { id: 1, name: "Mathematics", image: follow1, status: true },
+    { id: 2, name: "Activism", image: g3, status: true },
+    { id: 3, name: "MBA", image: g2, status: true },
+    { id: 4, name: "Philosophy", image: g1, status: true },
   ];
 
   useEffect(() => {
@@ -35,25 +40,6 @@ const Group = () => {
     }
   };
 
-  // const getFollow = (id) => {
-  //   const getItem = localStorage.getItem("follow");
-  //   if (getItem) {
-  //     console.log(id);
-  //     const getItemParse = JSON.parse(getItem);
-
-  //     if (getItemParse.length > 0) {
-  //       console.log(getItemParse);
-  //       const findProduct = getItemParse.find((item) => item.id === id);
-  //       const newCart = itemsFollows.map((item) =>
-  //         item.id === id
-  //       );
-  //       if (!findProduct) {
-  //         console.log(findProduct);
-  //       }
-  //     }
-  //   }
-  // };
-
   return (
     <div className="group_area">
       <h4 className="group_text display_flex justify_content_start">
@@ -67,14 +53,18 @@ const Group = () => {
             <h6>{item.name}</h6>
           </div>
           <div className="follow_area">
-            <button
-              className={`custom_btn follow_btn ${
-                item.status === false ? "follow_btn_active" : ""
-              }`}
-              onClick={() => addToDb(item)}
-            >
-              {item.status === false ? "Followed" : "Follow"}
-            </button>
+            {user ? (
+              <button
+                className={`custom_btn follow_btn ${
+                  item.status === false ? "follow_btn_active" : ""
+                }`}
+                onClick={() => addToDb(item)}
+              >
+                {item.status === false ? "Followed" : "Follow"}
+              </button>
+            ) : (
+              <button className={`custom_btn follow_btn `}>Follow</button>
+            )}
           </div>
         </div>
       ))}

@@ -70,6 +70,7 @@
 
 /* responsive header */
 @media (max-width: 768px) {
+
     .md_h_d_n {
         display: none;
     }

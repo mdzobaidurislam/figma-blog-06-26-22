@@ -4,19 +4,17 @@ import search_icon from "./../images/search.png";
 import arrow_drop_down from "./../images/arrow_drop_down.png";
 import profile from "./../images/blog/author4.png";
 import "./Header.css";
-import { Link } from "react-router-dom";
 import LoginModal from "../Modal/LoginModal";
 import SignUpModal from "../Modal/SignUpModal";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../Firebase/Firebase.init";
 import { signOut } from "firebase/auth";
-// import SpinnerLoading from "../Share/SpinnerLoading";
+import useGlobalContexts from "../../Context/GlobalContext";
+import { Link } from "react-router-dom";
 const Header = () => {
-  const [user, loading] = useAuthState(auth);
-  // console.log(user);
-  const [modalShow, setmodalshow] = useState(false);
-  const [modalShowSignUp, setmodalshowsignup] = useState(false);
-
+  const [user] = useAuthState(auth);
+  const { modalShow, setmodalshow, modalShowSignUp, setmodalshowsignup } =
+    useGlobalContexts();
   return (
     <>
       <header className="header">
@@ -56,6 +54,7 @@ const Header = () => {
                 </div>
               ) : (
                 <div>
+                  <Link to="/blog">Blog</Link>
                   Create account. <span>It’s free!</span>{" "}
                   <span
                     className="arrow_drop_down"
@@ -72,15 +71,11 @@ const Header = () => {
       <div>
         <LoginModal
           show={modalShow === true && modalShowSignUp === false}
-          setmodalshowsignup={setmodalshowsignup}
-          setmodalshow={setmodalshow}
           onHide={() => setmodalshow(false)}
         />
         <SignUpModal
           show={modalShowSignUp === true && modalShow === false}
           onHide={() => setmodalshowsignup(false)}
-          setmodalshowsignup={setmodalshowsignup}
-          setmodalshow={setmodalshow}
         />
       </div>
     </>

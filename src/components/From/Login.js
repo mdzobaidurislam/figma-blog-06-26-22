@@ -11,8 +11,10 @@ import { useForm } from "react-hook-form";
 // import SpinnerLoading from "../Share/SpinnerLoading";
 import { Button, InputGroup, Spinner } from "react-bootstrap";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import useGlobalContexts from "../../Context/GlobalContext";
 
-const Login = ({ setmodalshowsignup, setmodalshow, closehide }) => {
+const Login = ({ closehide }) => {
+  const { setmodalshow, setmodalshowsignup } = useGlobalContexts();
   const {
     register,
     formState: { errors },
@@ -159,7 +161,7 @@ const Login = ({ setmodalshowsignup, setmodalshow, closehide }) => {
                             </div>
                           </form>
                           <div>
-                            <SocialLogin setmodalshow={setmodalshow} />
+                            <SocialLogin />
                           </div>
                         </div>
                       </div>

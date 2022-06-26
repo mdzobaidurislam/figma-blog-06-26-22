@@ -16,11 +16,7 @@ const SignUpModal = (props) => {
       <div className="closeLoginmodal" onClick={props.onHide}>
         <img src={closemodal} alt="" />
       </div>
-      <SignUp
-        closehide={props.onHide}
-        setmodalshowsignup={props.setmodalshowsignup}
-        setmodalshow={props.setmodalshow}
-      />
+      <SignUp closehide={props.onHide} />
     </Modal>
   );
 };

@@ -9,12 +9,13 @@ import {
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import auth from "../Firebase/Firebase.init";
-import { useNavigate } from "react-router-dom";
 import { Button, Spinner } from "react-bootstrap";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import useGlobalContexts from "../../Context/GlobalContext";
 
-const SignUp = ({ setmodalshowsignup, setmodalshow, closehide }) => {
-  const navigate = useNavigate();
+const SignUp = ({ closehide }) => {
+  const { setmodalshow, setmodalshowsignup } = useGlobalContexts();
+
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
@@ -195,10 +196,7 @@ const SignUp = ({ setmodalshowsignup, setmodalshow, closehide }) => {
                                 </p>
                               )}
                             </div>
-                            <SocialLogin
-                              setmodalshowsignup={setmodalshowsignup}
-                              signup={true}
-                            />
+                            <SocialLogin signup={true} />
                           </div>
                         </form>
                       </div>

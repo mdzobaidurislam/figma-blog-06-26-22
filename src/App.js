@@ -12,8 +12,6 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" index element={<Home />} />
-        <Route path="login" element={<Login />} />
         <Route
           path="/blog"
           element={
@@ -22,6 +20,13 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route path="/" element={<Home />}>
+          <Route path="article" index element={<Blog />} />
+          <Route path="event" index element={<Blog />} />
+          <Route path="education" index element={<Blog />} />
+          <Route path="job" index element={<Blog />} />
+        </Route>
+        <Route path="login" element={<Login />} />
       </Routes>
     </div>
   );

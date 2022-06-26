@@ -1,3 +1,7 @@
+.mobaile_banner {
+    display: none;
+}
+
 .post_area {
     background: #FFFFFF;
     border: 1px solid #E0E0E0;
@@ -140,9 +144,12 @@
 }
 
 @media (max-width: 768px) {
-    .edit_post_btn {
+
+    .edit_post_btn,
+    .mobaile_banner {
         display: block !important
     }
+
 
 }
 
