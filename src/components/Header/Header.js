@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "./../images/logo/logo.png";
 import search_icon from "./../images/search.png";
 import arrow_drop_down from "./../images/arrow_drop_down.png";
@@ -10,7 +10,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../Firebase/Firebase.init";
 import { signOut } from "firebase/auth";
 import useGlobalContexts from "../../Context/GlobalContext";
-import { Link } from "react-router-dom";
 const Header = () => {
   const [user] = useAuthState(auth);
   const { modalShow, setmodalshow, modalShowSignUp, setmodalshowsignup } =
@@ -54,7 +53,6 @@ const Header = () => {
                 </div>
               ) : (
                 <div>
-                  <Link to="/blog">Blog</Link>
                   Create account. <span>It’s free!</span>{" "}
                   <span
                     className="arrow_drop_down"
