@@ -1,6 +1,5 @@
 import React from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
 import useGlobalContexts from "../../Context/GlobalContext";
 import auth from "../Firebase/Firebase.init";
 import SpinnerLoading from "../Share/SpinnerLoading";
@@ -15,7 +14,7 @@ const SocialLogin = ({ signup }) => {
   //   useSignInWithGithub(auth);
   // google
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  const navigate = useNavigate();
+
   let errorElement;
 
   // loading
@@ -29,13 +28,8 @@ const SocialLogin = ({ signup }) => {
   }
   // token
   if (user) {
-    if (setmodalshowsignup) {
-      setmodalshowsignup(false);
-    } else if (setmodalshow) {
-      setmodalshow(false);
-    } else {
-      navigate("/");
-    }
+    setmodalshowsignup(false);
+    setmodalshow(false);
   }
   // handleGoogleSignIn
   const handleGoogleSignIn = async () => {
