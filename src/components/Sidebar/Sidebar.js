@@ -7,15 +7,12 @@ import "./Sidebar.css";
 import Group from "../Group/Group";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../Firebase/Firebase.init";
-import useGlobalContexts from "../../Context/GlobalContext";
 const Sidebar = () => {
   const [user] = useAuthState(auth);
-  const { hello } = useGlobalContexts();
-  console.log(hello);
+
   return (
     <div className="sidebar_section md_sidebar_display_none">
       <div className="location_input">
-        <p>{hello}</p>
         <div className="input_seacrh">
           <div className="search_icon">
             <img src={location} alt="location" />
