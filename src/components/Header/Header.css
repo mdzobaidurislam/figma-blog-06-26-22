@@ -71,7 +71,8 @@
 /* responsive header */
 @media (max-width: 768px) {
 
-    .md_h_d_n {
+    .md_h_d_n,
+    .header {
         display: none;
     }
 
