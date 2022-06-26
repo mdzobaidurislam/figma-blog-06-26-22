@@ -88,6 +88,10 @@
     color: #E56135;
 }
 
+.job_btn {
+    color: #02B875 !important;
+}
+
 .time,
 .location_map {
     font-weight: 500;
@@ -142,6 +146,32 @@
     bottom: 3%;
     display: none;
 }
+
+.edit_dropdown .btn-primary {
+    color: #fff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    padding: 0 !important;
+    text-align: right;
+}
+
+.edit_dropdown .dropdown-toggle::after {
+    display: none;
+}
+
+.edit_dropdown .show>.btn-primary.dropdown-toggle {
+    color: #fff !important;
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.edit_dropdown .toggle:focus,
+.edit_dropdown .show>.btn-primary.dropdown-toggle:focus,
+.edit_dropdown .btn-primary:active:focus {
+    box-shadow: none !important;
+}
+
+
 
 @media (max-width: 768px) {
 

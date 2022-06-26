@@ -4,6 +4,7 @@ import share from "./../images/blog/share.png";
 import edit from "./../images/blog/edit.png";
 
 import { NavLink } from "react-router-dom";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 const BlogItem = ({ item }) => {
   return (
     <>
@@ -17,13 +18,19 @@ const BlogItem = ({ item }) => {
           </div>
           <div className="custom_gap_40 md_custom_gap_0 align_items_self_start display_flex">
             <h3 className="title">{item.title}</h3>
+
             <div className="edit_dropdown">
-              <img src={edit} alt="" />
-              {/* <div className="edit_dropdown_menu">
-                        <NavLink to="/edit">Edit</NavLink>
-                        <NavLink to="/report">Report</NavLink>
-                        <NavLink to="/option">Option 3</NavLink>
-                      </div> */}
+              <Dropdown>
+                <Dropdown.Toggle>
+                  <img src={edit} alt="" />
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className="edit_dropdown_menu">
+                  <NavLink to="/edit">Edit</NavLink>
+                  <NavLink to="/report">Report</NavLink>
+                  <NavLink to="/option">Option 3</NavLink>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
           </div>
           {item.feature === "post" && (
@@ -44,8 +51,8 @@ const BlogItem = ({ item }) => {
                   <span>{item.location_text}</span>
                 </div>
               </div>
-              <div className="view_website_area">
-                <NavLink to="/job" className="btn view_web_btn">
+              <div className="view_website_area ">
+                <NavLink to="/job" className="btn view_web_btn job_btn">
                   {item.btn_text}
                 </NavLink>
               </div>
