@@ -18,7 +18,7 @@ const Header = () => {
     <>
       <header className="header">
         <nav className="nav_bar display_flex">
-          <div className="logo" onClick={() => setmodalshow(true)}>
+          <div className="logo">
             <img src={logo} alt="logo" />
           </div>
           <div className="search_box_area md_h_d_n">
