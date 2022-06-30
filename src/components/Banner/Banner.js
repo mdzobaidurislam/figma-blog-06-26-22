@@ -37,8 +37,14 @@ const Banner = () => {
           </div>
           <div className="col-lg-12">
             <div className="banner_content">
-              <h2>Computer Engineering</h2>
-              <p>142,765 Computer Engineers follow this</p>
+              <h2>Can you add note?</h2>
+              <p>Please click the link below and login</p>
+              <button
+                onClick={() => setmodalshow(true)}
+                className="join_group_btn_banner add_note_btn"
+              >
+                Add your note
+              </button>
             </div>
           </div>
         </div>

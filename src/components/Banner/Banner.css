@@ -47,10 +47,12 @@
 }
 
 .banner_content {
-    position: absolute;
+    position: relative;
     z-index: 1111;
-    bottom: 70px;
+    width: max-content;
     color: #fff;
+    margin: auto;
+    top: 160px;
 }
 
 .banner_content h2 {
@@ -67,7 +69,16 @@
 }
 
 
+.add_note_btn {
+    background: #0d6efd;
+    border: 2px solid #0d6efd;
+    transition: all .5s;
+}
 
+.add_note_btn:hover {
+    background: transparent;
+
+}
 
 @media (max-width: 768px) {
 

@@ -1,0 +1,24 @@
+import React from "react";
+import { Modal } from "react-bootstrap";
+import ToDoEdit from "../ToDo/ToDoEdit";
+import closemodal from "./../images/login/closemodal.png";
+
+const TodoEditModal = (props) => {
+  return (
+    <Modal
+      show={props.show}
+      onHide={props.onHide}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      contentClassName="from_account_area"
+    >
+      <div className="closeLoginmodal" onClick={props.onHide}>
+        <img src={closemodal} alt="" />
+      </div>
+      <ToDoEdit />
+    </Modal>
+  );
+};
+
+export default TodoEditModal;
