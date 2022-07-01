@@ -11,7 +11,7 @@ const TodoCompleted = () => {
   useEffect(() => {
     const getAllServices = async () => {
       const { data } = await axios.get(
-        `http://localhost:8080/api/todocompleted/${email}`
+        `https://figma-blog-06-26-22-server.herokuapp.com/api/todocompleted/${email}`
       );
       if (data) {
         setTodos(data);
@@ -23,7 +23,9 @@ const TodoCompleted = () => {
   const handleToDoComplete = async (id) => {
     console.log(id);
     try {
-      const { data } = await axios.put(`http://localhost:8080/api/todo/${id}`);
+      const { data } = await axios.put(
+        `https://figma-blog-06-26-22-server.herokuapp.com/api/todo/${id}`
+      );
       if (data.success) {
         toast.success(data.msg);
       } else {

@@ -21,7 +21,7 @@ const ToDoEdit = () => {
   useEffect(() => {
     const getAllServices = async () => {
       const { data } = await axios.get(
-        `http://localhost:8080/api/todoid/${todoId}`
+        `https://figma-blog-06-26-22-server.herokuapp.com/api/todoid/${todoId}`
       );
       if (data) {
         setName(data.name);
@@ -40,7 +40,7 @@ const ToDoEdit = () => {
       },
     };
     const { data } = await axios.put(
-      `http://localhost:8080/api/todoid/${todoId}/${user?.email}`,
+      `https://figma-blog-06-26-22-server.herokuapp.com/api/todoid/${todoId}/${user?.email}`,
       AddData,
       config
     );

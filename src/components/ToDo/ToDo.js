@@ -21,7 +21,7 @@ const ToDo = () => {
       name: inputdata.name,
     };
     const { data } = await axios.post(
-      `http://localhost:8080/api/todo/`,
+      `https://figma-blog-06-26-22-server.herokuapp.com/api/todo/`,
       AddData
     );
     if (data.success) {
